@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CE08892-B77F-4346-8CF4-E3D1AA6559A3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommunityMedicineAutomationApp</RootNamespace>
+    <AssemblyName>CommunityMedicineAutomationApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EGIS.ShapeFileLib, Version=4.3.0.0, Culture=neutral, PublicKeyToken=05b98c869b5ffe6a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebExample1\Bin\EGIS.ShapeFileLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EGIS.Web.Controls, Version=4.3.0.0, Culture=neutral, PublicKeyToken=05b98c869b5ffe6a, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebExample1\Bin\EGIS.Web.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="GMaps">
+      <HintPath>..\packages\Subgurim.Maps.4.1.0.6\lib\net20\GMaps.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bin\CommunityMedicineAutomationApp.dll" />
+    <Content Include="Bin\CommunityMedicineAutomationApp.pdb" />
+    <Content Include="Bin\EGIS.ShapeFileLib.dll" />
+    <Content Include="Bin\EGIS.ShapeFileLib.xml" />
+    <Content Include="Bin\EGIS.Web.Controls.dll" />
+    <Content Include="Bin\EGIS.Web.Controls.XML" />
+    <Content Include="Bin\geomutil_lib.dll" />
+    <Content Include="Bin\geomutil_libx64.dll" />
+    <Content Include="Bin\Newtonsoft.Json.dll" />
+    <Content Include="CommunityMedicineAutomationApp.csproj.DotSettings.user" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\form-elements.css" />
+    <Content Include="css\formValidation.min.css" />
+    <Content Include="css\jquery.dataTables.css" />
+    <Content Include="css\style.css" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="font-awesome\less\bordered-pulled.less" />
+    <Content Include="font-awesome\less\core.less" />
+    <Content Include="font-awesome\less\fixed-width.less" />
+    <Content Include="font-awesome\less\font-awesome.less" />
+    <Content Include="font-awesome\less\icons.less" />
+    <Content Include="font-awesome\less\larger.less" />
+    <Content Include="font-awesome\less\list.less" />
+    <Content Include="font-awesome\less\mixins.less" />
+    <Content Include="font-awesome\less\path.less" />
+    <Content Include="font-awesome\less\rotated-flipped.less" />
+    <Content Include="font-awesome\less\spinning.less" />
+    <Content Include="font-awesome\less\stacked.less" />
+    <Content Include="font-awesome\less\variables.less" />
+    <Content Include="font-awesome\scss\font-awesome.scss" />
+    <Content Include="font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="font-awesome\scss\_core.scss" />
+    <Content Include="font-awesome\scss\_fixed-width.scss" />
+    <Content Include="font-awesome\scss\_icons.scss" />
+    <Content Include="font-awesome\scss\_larger.scss" />
+    <Content Include="font-awesome\scss\_list.scss" />
+    <Content Include="font-awesome\scss\_mixins.scss" />
+    <Content Include="font-awesome\scss\_path.scss" />
+    <Content Include="font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="font-awesome\scss\_spinning.scss" />
+    <Content Include="font-awesome\scss\_stacked.scss" />
+    <Content Include="font-awesome\scss\_variables.scss" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\less\bootstrap-datetimepicker-build.less" />
+    <Content Include="Content\less\_bootstrap-datetimepicker.less" />
+    <Content Include="GMaps.dll" />
+    <Content Include="js\plugins\bootstrap-datepicker.js" />
+    <Content Include="packages.config" />
+    <Content Include="bangladesh.egp" />
+    <Content Include="bangladesh\BGD_adm3.dbf" />
+    <Content Include="bangladesh\BGD_adm3.prj" />
+    <Content Include="bangladesh\BGD_adm3.shp" />
+    <Content Include="bangladesh\BGD_adm3.shx" />
+    <Content Include="Bin\CommunityMedicineAutomationApp.dll.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-rtl.css" />
+    <Content Include="css\bootstrap-rtl.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\plugins\morris.css" />
+    <Content Include="css\sb-admin-rtl.css" />
+    <Content Include="css\sb-admin.css" />
+    <Content Include="font-awesome\css\font-awesome.css" />
+    <Content Include="font-awesome\css\font-awesome.min.css" />
+    <Content Include="font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\formValidation.min.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.printpage.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\plugins\flot\excanvas.min.js" />
+    <Content Include="js\plugins\flot\flot-data.js" />
+    <Content Include="js\plugins\flot\jquery.flot.js" />
+    <Content Include="js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="js\plugins\morris\morris-data.js" />
+    <Content Include="js\plugins\morris\morris.js" />
+    <Content Include="js\plugins\morris\morris.min.js" />
+    <Content Include="js\plugins\morris\raphael.min.js" />
+    <Content Include="UI\Admin\CreateNewCenterUI.aspx" />
+    <Content Include="UI\Admin\DiseaseEntryUI.aspx" />
+    <Content Include="UI\Admin\index.aspx" />
+    <Content Include="UI\Admin\MedicineEntryUI.aspx" />
+    <Content Include="UI\Admin\MessageUI.aspx" />
+    <Content Include="UI\Admin\SendMedicineUI.aspx" />
+    <Content Include="UI\Admin\AllDiseasesBarChartUI.aspx" />
+    <Content Include="UI\Admin\DiseaseDemographicReportUI.aspx" />
+    <Content Include="UI\Admin\DiseaseWiseReportUI.aspx" />
+    <Content Include="UI\DoctorEntruUi.aspx" />
+    <Content Include="UI\index.aspx" />
+    <Content Include="UI\LoginUI.aspx" />
+    <Content Include="UI\MedicineStockReportUI.aspx" />
+    <Content Include="UI\ShowAllHistoryOfaPatientUI.aspx" />
+    <Content Include="UI\TreatmentGivenUI.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CenterManager.cs" />
+    <Compile Include="BLL\DiseasesManager.cs" />
+    <Compile Include="BLL\DistrictThanaManager.cs" />
+    <Compile Include="BLL\DoctorManager.cs" />
+    <Compile Include="BLL\DropDownManager.cs" />
+    <Compile Include="BLL\MedicineManager.cs" />
+    <Compile Include="DAL\DAO\Center.cs" />
+    <Compile Include="DAL\DAO\Diseases.cs" />
+    <Compile Include="DAL\DAO\District.cs" />
+    <Compile Include="DAL\DAO\Doctor.cs" />
+    <Compile Include="DAL\DAO\LogIn.cs" />
+    <Compile Include="DAL\DAO\Medicine.cs" />
+    <Compile Include="DAL\DAO\MedicineStock.cs" />
+    <Compile Include="DAL\DAO\Report.cs" />
+    <Compile Include="DAL\DAO\SendMedicine.cs" />
+    <Compile Include="DAL\DAO\Thana.cs" />
+    <Compile Include="DAL\DAO\Treatment.cs" />
+    <Compile Include="DAL\DAO\Voter.cs" />
+    <Compile Include="DAL\Gateway\CenterGateway.cs" />
+    <Compile Include="DAL\Gateway\DiseasesGateway.cs" />
+    <Compile Include="DAL\Gateway\DistrictThanaGateway.cs" />
+    <Compile Include="DAL\Gateway\DoctorGatetway.cs" />
+    <Compile Include="DAL\Gateway\DropDownGateway.cs" />
+    <Compile Include="DAL\Gateway\MedicineGateway.cs" />
+    <Compile Include="DAL\Gateway\SqlConnectionGateway.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Admin\CreateNewCenterUI.aspx.cs">
+      <DependentUpon>CreateNewCenterUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\CreateNewCenterUI.aspx.designer.cs">
+      <DependentUpon>CreateNewCenterUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\DiseaseEntryUI.aspx.cs">
+      <DependentUpon>DiseaseEntryUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\DiseaseEntryUI.aspx.designer.cs">
+      <DependentUpon>DiseaseEntryUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\MedicineEntryUI.aspx.cs">
+      <DependentUpon>MedicineEntryUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\MedicineEntryUI.aspx.designer.cs">
+      <DependentUpon>MedicineEntryUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\MessageUI.aspx.cs">
+      <DependentUpon>MessageUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\MessageUI.aspx.designer.cs">
+      <DependentUpon>MessageUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\SendMedicineUI.aspx.cs">
+      <DependentUpon>SendMedicineUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\SendMedicineUI.aspx.designer.cs">
+      <DependentUpon>SendMedicineUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\AllDiseasesBarChartUI.aspx.cs">
+      <DependentUpon>AllDiseasesBarChartUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\AllDiseasesBarChartUI.aspx.designer.cs">
+      <DependentUpon>AllDiseasesBarChartUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\DiseaseDemographicReportUI.aspx.cs">
+      <DependentUpon>DiseaseDemographicReportUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\DiseaseDemographicReportUI.aspx.designer.cs">
+      <DependentUpon>DiseaseDemographicReportUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Admin\DiseaseWiseReportUI.aspx.cs">
+      <DependentUpon>DiseaseWiseReportUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Admin\DiseaseWiseReportUI.aspx.designer.cs">
+      <DependentUpon>DiseaseWiseReportUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DoctorEntruUi.aspx.cs">
+      <DependentUpon>DoctorEntruUi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DoctorEntruUi.aspx.designer.cs">
+      <DependentUpon>DoctorEntruUi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginUI.aspx.cs">
+      <DependentUpon>LoginUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\LoginUI.aspx.designer.cs">
+      <DependentUpon>LoginUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MedicineStockReportUI.aspx.cs">
+      <DependentUpon>MedicineStockReportUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MedicineStockReportUI.aspx.designer.cs">
+      <DependentUpon>MedicineStockReportUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShowAllHistoryOfaPatientUI.aspx.cs">
+      <DependentUpon>ShowAllHistoryOfaPatientUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ShowAllHistoryOfaPatientUI.aspx.designer.cs">
+      <DependentUpon>ShowAllHistoryOfaPatientUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TreatmentGivenUI.aspx.cs">
+      <DependentUpon>TreatmentGivenUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TreatmentGivenUI.aspx.designer.cs">
+      <DependentUpon>TreatmentGivenUI.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48322</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48322/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,28 @@
+<sfproject version="1.0">
+  <MapBackColor>buttonface</MapBackColor>
+  <layers>
+    <shapefile>
+      <name>BGD_adm3.shp</name>
+      <path>bangladesh/BGD_adm3</path>
+      <renderer>
+        <MinZoomLevel>-1</MinZoomLevel>
+        <MaxZoomLevel>-1</MaxZoomLevel>
+        <MinRenderLabelZoom>-1</MinRenderLabelZoom>
+        <FieldName>NAME_3</FieldName>
+        <Font Size="10" Name="Microsoft Sans Serif" Style="Regular">
+        </Font>
+        <FontColor>Black</FontColor>
+        <FillColor>#FCFCFC</FillColor>
+        <OutlineColor>#969696</OutlineColor>
+        <PenWidthScale>0.0001355183</PenWidthScale>
+        <FillInterior>True</FillInterior>
+        <Selectable>False</Selectable>
+        <LineType>Outline</LineType>
+        <ShadowText>True</ShadowText>
+        <PointSize>5</PointSize>
+        <UseToolTip>True</UseToolTip>
+        <ToolTipFieldName>NAME_3</ToolTipFieldName>
+      </renderer>
+    </shapefile>
+  </layers>
+</sfproject>

@@ -1,0 +1,30 @@
+
+District Name Jamalpur
+Thana Name Madargonj
+Center Name Morden
+Center Code Morden3351
+Password tuDd8uBA
+
+District Name 	: Dhaka
+Thana Name 	: Gazipur
+Center Name 	: Medinoma
+Center Code	: Medinoma4486
+Password 	: vyXN6z9!
+
+District Name : Sylhet
+Thana Name : Fenchuganj
+Center Name : Clinic
+Center Code : ClinicC3B5E
+Password : iOfWrDjT
+
+
+Patient
+9509623450915
+5644309456813
+
+VoterId = (string) Session["voterID"];
+            if (VoterId != string.Empty)
+            {
+                GetVoter();
+                CreateChildControls();
+            }
